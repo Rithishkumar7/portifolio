@@ -1,0 +1,116 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[margin=0.68in]{geometry}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{parskip}
+\usepackage{fontawesome}
+\usepackage{multicol}
+
+\pagenumbering{gobble}
+
+\setlist[itemize]{itemsep=1pt, topsep=2pt}
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{6pt}{3pt}
+
+\begin{document}
+
+\begin{center}
+{\LARGE \textbf{Rithish Janjeerapu}}\\
+Hyderabad, Telangana, India \\
+\href{mailto:rithishjanjeerapu007@email.com}{rithishjanjeerapu007@email.com}
+\;|\; +91 7842121778
+\;|\; \href{https://www.linkedin.com/in/rithish-janjeerapu}{LinkedIn}
+\;|\; \href{https://github.com/Rithishkumar7}{GitHub}
+\end{center}
+
+\section*{Summary}
+
+Aspiring \textbf{Full Stack Developer} with growing interest in \textbf{Artificial Intelligence and Data Science}. Skilled in building real-world applications using modern frameworks and integrating AI APIs. Strong foundation in programming, data structures, and machine learning concepts. Passionate about solving real-world problems through scalable software and intelligent systems.
+
+\section*{Education}
+
+\textbf{Bachelor of Engineering (B.E.) in Computer Science} \hfill \textit{2024 -- 2027} \\
+Chaitanya Bharathi Institute of Technology, Telangana \\
+GPA: 8.63 \quad | Key Coursework: Data Structures, Algorithms, Artificial Intelligence
+
+\vspace{0.4em}
+
+\textbf{Diploma in Computer Science} \hfill \textit{2021 -- 2024} \\
+Govt. Institute of Electronics, Telangana \\
+GPA: 9.5 / 10 \quad | Coursework: C++, Java, DBMS, Python
+
+\section*{Certifications}
+
+Google Cloud – Data Analytics \hfill Dec 2024 \\
+OCI AI Foundations Associate \hfill Oct 2025 \\
+Data Structure and Algorithms using Java-NPTEL\hfill Oct 2024
+
+\section*{Achievements}
+
+\begin{itemize}[leftmargin=*]
+
+\item Solved over \textbf{400+ problems on LeetCode}, demonstrating strong analytical and problem-solving ability.
+
+\item Achieved a \textbf{4-star rating in Problem Solving} and \textbf{3-star rating in SQL} on HackerRank.
+
+\item Secured \textbf{2449 Rank in Amazon ML Challenge 2025}, competing in a large-scale machine learning competition.
+
+\item Received \textbf{Special Mention in Hacktober Fest Hackathon at CBIT}.
+
+\end{itemize}
+
+\section*{Skills}
+
+\textbf{Programming Languages:} Python, Java, SQL, JavaScript, HTML, CSS 
+
+\textbf{Frameworks \& Libraries:} React, Node.js, Express, MongoDB, Bootstrap, LangChain, LangGraph 
+
+\textbf{AI \& LLM:} Retrieval-Augmented Generation (RAG), LLM Integration (Groq, LLaMA), Prompt Engineering 
+
+\textbf{Data Tools:} Power BI, Tableau, Excel, Pandas, NumPy, FAISS (Vector Database) 
+\textbf{Soft Skills:} Teamwork, Communication, Leadership, Problem-Solving
+\section*{Projects}
+
+\textbf{AI-Powered Blog Website )} \hfill
+{\small \href{https://github.com/Rithishkumar7/AI-Powered-Blog-website}{GitHub}}
+
+\begin{itemize}[leftmargin=*]
+
+\item Built an AI-enabled blog platform using React, Node.js, Express, and MongoDB.
+
+\item Integrated OpenAI / Eden AI APIs to enable intelligent blog generation and writing assistance.
+
+\item Designed a responsive UI with dark mode to enhance user experience.
+
+\end{itemize}
+
+\textbf{Multi-Format Document RAG System} \hfill
+{\small \href{<https://github.com/Rithishkumar7/Multi-Format-Document-RAG-System.git>}{GitHub}}
+
+\begin{itemize}[leftmargin=*]
+
+\item Developed a Retrieval-Augmented Generation (RAG) system for querying multi-format documents using LangChain and FAISS.
+
+\item Implemented document ingestion, text chunking, and semantic search using sentence-transformer embeddings.
+
+\item Integrated Groq LLM (LLaMA3.1) to generate context-aware responses, improving information retrieval accuracy.
+
+\end{itemize}
+
+\textbf{Multiple Disease Prediction and Recommendation System } \hfill
+{\small \href{https://github.com/Rithishkumar7/multiple_disease_prediction_system}{GitHub}}
+
+\begin{itemize}[leftmargin=*]
+
+\item Built machine learning models using Scikit-learn to predict Parkinson’s disease, heart disease, and diabetes.
+
+\item Applied data preprocessing and feature analysis to improve model predictions.
+
+\item Implemented a personalized health recommendation system based on prediction severity.
+
+\end{itemize}
+
+\end{document}

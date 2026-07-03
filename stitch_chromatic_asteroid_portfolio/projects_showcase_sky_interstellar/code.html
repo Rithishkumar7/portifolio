@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ASTRO.DEV - Selected Works</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "surface-container-low": "#edf5f6",
+                "on-tertiary-container": "#006a6e",
+                "inverse-on-surface": "#eaf2f3",
+                "on-secondary-fixed-variant": "#464747",
+                "on-error": "#ffffff",
+                "inverse-surface": "#2a3233",
+                "surface-dim": "#d3dcdc",
+                "tertiary-fixed-dim": "#59d8de",
+                "on-primary-container": "#006970",
+                "on-surface": "#151d1e",
+                "secondary-container": "#e0dfdf",
+                "outline-variant": "#b9cacb",
+                "on-primary": "#ffffff",
+                "primary-container": "#00f0ff",
+                "on-secondary": "#ffffff",
+                "background": "#f3fbfb",
+                "secondary": "#5d5e5f",
+                "error": "#ba1a1a",
+                "surface-container": "#e7eff0",
+                "on-tertiary": "#ffffff",
+                "surface-variant": "#dce4e5",
+                "on-tertiary-fixed-variant": "#004f52",
+                "inverse-primary": "#00dbe9",
+                "on-secondary-fixed": "#1a1c1c",
+                "surface-container-high": "#e1eaea",
+                "surface-container-lowest": "#ffffff",
+                "secondary-fixed": "#e3e2e2",
+                "on-surface-variant": "#3b494b",
+                "secondary-fixed-dim": "#c6c6c6",
+                "surface-container-highest": "#dce4e5",
+                "surface-bright": "#f3fbfb",
+                "on-primary-fixed-variant": "#004f54",
+                "primary": "#006970",
+                "on-error-container": "#93000a",
+                "tertiary-fixed": "#79f5fb",
+                "on-background": "#151d1e",
+                "error-container": "#ffdad6",
+                "on-secondary-container": "#626363",
+                "tertiary-container": "#6fecf2",
+                "primary-fixed-dim": "#00dbe9",
+                "outline": "#6a7a7b",
+                "primary-fixed": "#7df4ff",
+                "on-tertiary-fixed": "#002021",
+                "surface-tint": "#006970",
+                "on-primary-fixed": "#002022",
+                "surface": "#f3fbfb",
+                "tertiary": "#00696d"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "xl": "40px",
+                "gutter": "24px",
+                "margin": "32px",
+                "xxl": "80px",
+                "sm": "8px",
+                "xs": "4px",
+                "lg": "24px",
+                "unit": "4px",
+                "md": "16px",
+                "container-max": "1280px",
+                "section-gap": "160px",
+        },
+        "fontFamily": {
+                "headline-lg": [
+                        "Space Grotesk"
+                ],
+                "body-md": [
+                        "Space Grotesk"
+                ],
+                "body-lg": [
+                        "Space Grotesk"
+                ],
+                "display-lg": [
+                        "Space Grotesk"
+                ],
+                "headline-md": [
+                        "Space Grotesk"
+                ],
+                "label-caps": [
+                        "Space Grotesk"
+                ],
+                "display-xl": [
+                        "Space Grotesk"
+                ],
+                "label-sm": [
+                        "Space Grotesk"
+                ]
+        },
+        "fontSize": {
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "1.2",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "1.6",
+                                "fontWeight": "400"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "1.6",
+                                "fontWeight": "400"
+                        }
+                ],
+                "display-lg": [
+                        "64px",
+                        {
+                                "lineHeight": "1.1",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "display-xl": [
+                        "72px", 
+                        {
+                                "lineHeight": "1.1", 
+                                "letterSpacing": "-0.04em", 
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "1.3",
+                                "fontWeight": "500"
+                        }
+                ],
+                "label-caps": [
+                        "12px",
+                        {
+                                "lineHeight": "1.0",
+                                "letterSpacing": "0.1em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "label-sm": [
+                        "12px", 
+                        {
+                                "lineHeight": "1.0", 
+                                "letterSpacing": "0.1em", 
+                                "fontWeight": "500"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen relative overflow-x-hidden selection:bg-primary/30 selection:text-primary font-body-md">
+<!-- Static Deep Space Background Layer -->
+<div class="fixed inset-0 pointer-events-none z-0">
+<div class="absolute top-[-20%] left-[-10%] w-[60vw] h-[60vw] rounded-full bg-primary/10 blur-[120px]"></div>
+<div class="absolute bottom-[-10%] right-[-10%] w-[50vw] h-[50vw] rounded-full bg-secondary/10 blur-[100px]"></div>
+<div class="absolute top-[40%] left-[60%] w-[30vw] h-[30vw] rounded-full bg-tertiary-container/20 blur-[80px]"></div>
+</div>
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full border-b border-outline-variant/30 flex justify-between items-center px-8 h-20 z-50 bg-surface/60 backdrop-blur-xl shadow-sm">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">rocket_launch</span>
+<span class="font-['Space_Grotesk'] tracking-widest uppercase text-xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-primary to-tertiary">ASTRO.DEV</span>
+</div>
+<div class="hidden md:flex gap-8">
+<a class="font-['Space_Grotesk'] tracking-widest uppercase text-on-surface-variant hover:text-primary transition-all duration-300" href="#">Home</a>
+<a class="font-['Space_Grotesk'] tracking-widest uppercase text-on-surface-variant hover:text-primary transition-all duration-300" href="#">About</a>
+<a class="font-['Space_Grotesk'] tracking-widest uppercase text-tertiary after:content-[''] after:block after:w-1 after:h-1 after:bg-tertiary after:rounded-full after:mx-auto hover:text-primary transition-all duration-300" href="#">Work</a>
+</div>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:text-primary-fixed transition-all duration-300 hover:glow-sm active:scale-95">menu</span>
+</header>
+<!-- Main Content Canvas -->
+<main class="relative z-10 pt-40 pb-section-gap px-gutter max-w-container-max mx-auto">
+<!-- Section Header -->
+<div class="mb-24 text-center">
+<h1 class="font-display-xl text-display-xl text-on-surface mb-6">Missions</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Selected deep space explorations and high-performance digital instrumentation.</p>
+</div>
+<!-- Projects Stack -->
+<div class="flex flex-col gap-16 md:gap-32">
+<!-- Project Card 1 -->
+<article class="bg-surface-container/60 backdrop-blur-[20px] border border-outline-variant/50 rounded-xl overflow-hidden shadow-sm hover:shadow-md hover:bg-surface-container-high/80 hover:border-primary/30 transition-all duration-500 group flex flex-col md:flex-row">
+<div class="w-full md:w-[45%] h-72 md:h-auto relative overflow-hidden border-b md:border-b-0 md:border-r border-outline-variant/30">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out" data-alt="A highly detailed conceptual rendering of a deep space observation deck overlooking a vibrant, glowing nebula. The scene is illuminated by the cold, precise lighting of the futuristic interior contrasting with the chaotic, colorful gas clouds outside. The visual style is hyper-realistic, emphasizing sleek metallic surfaces, glass reflections, and a premium, cinematic aerospace aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDseK-Ah6yrsHl6q-gCAwBgO9rKrNTg_NaKeqVT9GX6WpNBJXsptujmzShqlxpNJ3jhAZlGzWsNrk1Lw9uFpy8V1X6AVi26gROZbz20laCLL2sEmYrT-AQR9KLwM9T9oVKfgztQiGAIvFeAm40vGE5mijFOWQV_pPqDX3LSVfD4quc4Tfqz1Wgres-3sYyk8EbrVecl-HN2Dr1hDdoIVaAGW2V86QItx7huMFYPqIuN_eQ7vzBanHa6eL2_hrP11W5zRp9AiejWIP4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-60 md:hidden"></div>
+</div>
+<div class="p-8 md:p-16 flex flex-col justify-center w-full md:w-[55%] relative">
+<div class="absolute top-0 right-0 p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+<span class="material-symbols-outlined text-primary/50 text-4xl">travel_explore</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Project Nebula</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl">An advanced data visualization platform tracking celestial anomalies in real-time. Built with a high-performance rendering engine to handle millions of data points across a responsive 3D canvas.</p>
+<div class="flex flex-wrap gap-3 mb-10">
+<span class="bg-surface-container-high px-4 py-2 rounded-full border border-outline-variant font-label-sm text-label-sm text-on-surface-variant">Next.js</span>
+<span class="bg-surface-container-high px-4 py-2 rounded-full border border-outline-variant font-label-sm text-label-sm text-on-surface-variant">WebGL</span>
+<span class="bg-surface-container-high px-4 py-2 rounded-full border border-outline-variant font-label-sm text-label-sm text-on-surface-variant">Tailwind CSS</span>
+</div>
+<div class="flex flex-wrap gap-4 mt-auto">
+<button class="bg-gradient-to-r from-primary-container to-tertiary-container text-on-primary-container font-label-sm text-label-sm px-8 py-4 rounded-DEFAULT border border-transparent transition-all hover:brightness-105 flex items-center gap-2 group/btn shadow-sm hover:shadow-md">
+                            Live Demo <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform">open_in_new</span>
+</button>
+<button class="border border-outline text-on-surface font-label-sm text-label-sm px-8 py-4 rounded-DEFAULT hover:bg-surface-variant hover:border-outline-variant transition-colors flex items-center gap-2">
+                            GitHub <span class="material-symbols-outlined text-sm">code</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Project Card 2 -->
+<article class="bg-surface-container/60 backdrop-blur-[20px] border border-outline-variant/50 rounded-xl overflow-hidden shadow-sm hover:shadow-md hover:bg-surface-container-high/80 hover:border-primary/30 transition-all duration-500 group flex flex-col md:flex-row-reverse">
+<div class="w-full md:w-[45%] h-72 md:h-auto relative overflow-hidden border-b md:border-b-0 md:border-l border-outline-variant/30">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out" data-alt="A striking digital installation art piece featuring a glowing, orbital UI hovering above a dark, textured planetary surface. The scene is illuminated by stark, high-contrast cyan and violet lighting, creating a dark-mode aerospace aesthetic. The layout is highly technical, resembling a mission control interface floating in a void, emphasizing precision, negative space, and premium digital craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiqfgFoy4yDz9k7CBaZwBJqxtbcjBbzy9cStvcnbV2J9MZ2L4jxoSFkF2JurUP9oPL6BPmymGDG43qIF7fSnRR3Ac_voVf1NRjO4y57CeZWJ6SXYMhIneBVdnUPTu6nrJo0xZ8pcvjRl_N7ItD0pE3QbHukJtiwARhiybuGdEmalfj2fVSq6OzoJf8BxLcTjNJZn_PjYF22hsmGuHF6t0Xu3O3FinrDIK3JXyBvC1Z-geUDK8fXhux9L4VDm39HIh1_SWuQvETiZ8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-60 md:hidden"></div>
+</div>
+<div class="p-8 md:p-16 flex flex-col justify-center w-full md:w-[55%] relative">
+<div class="absolute top-0 left-0 p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+<span class="material-symbols-outlined text-primary/50 text-4xl">satellite_alt</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Orbital Uplink</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl">A secure, low-latency communication protocol dashboard for satellite arrays. Features military-grade encryption visualization and a fully custom glassmorphic UI system built for high-stakes environments.</p>
+<div class="flex flex-wrap gap-3 mb-10">
+<span class="bg-surface-container-high px-4 py-2 rounded-full border border-outline-variant font-label-sm text-label-sm text-on-surface-variant">React</span>
+<span class="bg-surface-container-high px-4 py-2 rounded-full border border-outline-variant font-label-sm text-label-sm text-on-surface-variant">TypeScript</span>
+<span class="bg-surface-container-high px-4 py-2 rounded-full border border-outline-variant font-label-sm text-label-sm text-on-surface-variant">WebSockets</span>
+</div>
+<div class="flex flex-wrap gap-4 mt-auto">
+<button class="bg-gradient-to-r from-primary-container to-tertiary-container text-on-primary-container font-label-sm text-label-sm px-8 py-4 rounded-DEFAULT border border-transparent transition-all hover:brightness-105 flex items-center gap-2 group/btn shadow-sm hover:shadow-md">
+                            Live Demo <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform">open_in_new</span>
+</button>
+<button class="border border-outline text-on-surface font-label-sm text-label-sm px-8 py-4 rounded-DEFAULT hover:bg-surface-variant hover:border-outline-variant transition-colors flex items-center gap-2">
+                            GitHub <span class="material-symbols-outlined text-sm">code</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Project Card 3 -->
+<article class="bg-surface-container/60 backdrop-blur-[20px] border border-outline-variant/50 rounded-xl overflow-hidden shadow-sm hover:shadow-md hover:bg-surface-container-high/80 hover:border-primary/30 transition-all duration-500 group flex flex-col md:flex-row">
+<div class="w-full md:w-[45%] h-72 md:h-auto relative overflow-hidden border-b md:border-b-0 md:border-r border-outline-variant/30">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out" data-alt="A minimalist architectural visualization of a futuristic data vault floating in space. The monolithic structure is clad in matte black material, intersected by thin, glowing strips of cyan light. The background is a stark, absolute black vacuum, emphasizing the isolation and security of the facility. The visual style is highly geometric, precise, and conveys a sense of imposing, high-end technology." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhsJqLNO5cseWX_01iCB_3EcMcMqLfZCwmMthvmbgM6nCHrGWXD6_uZEvp-Gz7RDWrkitxKzId61pZrt0GLEUHxyRK6NuLiyW9lGuLgFL-luN9upcjv8e7Z2QR_M6cxwzuEgZWPzvaApXTZ36yQwbBzAbZxX-cZhDLjqxPHzEVzUtEGrtRCW-tSxRG8AlRR4Aq4L49kCmCtoMFMkUjvr6SX6LAD6B2fl0geWBIR9EqjuEbFBIWqz7nREaoT7LkfA6e2RMEsD_ZazA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-60 md:hidden"></div>
+</div>
+<div class="p-8 md:p-16 flex flex-col justify-center w-full md:w-[55%] relative">
+<div class="absolute top-0 right-0 p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+<span class="material-symbols-outlined text-primary/50 text-4xl">memory</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Core Vault</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl">A decentralized identity management system leveraging zero-knowledge proofs. Designed with a brutalist yet refined glassmorphic aesthetic to convey absolute security and data integrity in the cosmic void.</p>
+<div class="flex flex-wrap gap-3 mb-10">
+<span class="bg-surface-container-high px-4 py-2 rounded-full border border-outline-variant font-label-sm text-label-sm text-on-surface-variant">Vue.js</span>
+<span class="bg-surface-container-high px-4 py-2 rounded-full border border-outline-variant font-label-sm text-label-sm text-on-surface-variant">Solidity</span>
+<span class="bg-surface-container-high px-4 py-2 rounded-full border border-outline-variant font-label-sm text-label-sm text-on-surface-variant">Framer Motion</span>
+</div>
+<div class="flex flex-wrap gap-4 mt-auto">
+<button class="bg-gradient-to-r from-primary-container to-tertiary-container text-on-primary-container font-label-sm text-label-sm px-8 py-4 rounded-DEFAULT border border-transparent transition-all hover:brightness-105 flex items-center gap-2 group/btn shadow-sm hover:shadow-md">
+                            Live Demo <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform">open_in_new</span>
+</button>
+<button class="border border-outline text-on-surface font-label-sm text-label-sm px-8 py-4 rounded-DEFAULT hover:bg-surface-variant hover:border-outline-variant transition-colors flex items-center gap-2">
+                            GitHub <span class="material-symbols-outlined text-sm">code</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 flex justify-around items-center z-50 w-[90%] max-w-md rounded-2xl border border-outline-variant/50 bg-surface-container-high/80 backdrop-blur-2xl shadow-lg">
+<a class="text-on-surface-variant p-3 hover:bg-surface-variant active:scale-90 transition-transform rounded-xl" href="#">
+<span class="material-symbols-outlined">home</span>
+</a>
+<a class="text-on-surface-variant p-3 hover:bg-surface-variant active:scale-90 transition-transform rounded-xl" href="#">
+<span class="material-symbols-outlined">person</span>
+</a>
+<a class="bg-secondary-container text-on-secondary-container rounded-xl p-3 shadow-sm active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined">work</span>
+</a>
+<a class="text-on-surface-variant p-3 hover:bg-surface-variant active:scale-90 transition-transform rounded-xl" href="#">
+<span class="material-symbols-outlined">emoji_events</span>
+</a>
+<a class="text-on-surface-variant p-3 hover:bg-surface-variant active:scale-90 transition-transform rounded-xl" href="#">
+<span class="material-symbols-outlined">mail</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="w-full py-20 border-t border-outline-variant/30 bg-transparent relative z-10">
+<div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-8">
+<span class="font-['Space_Grotesk'] tracking-widest text-sm text-primary">© 2024 DEEP SPACE ARCHITECT</span>
+<div class="text-lg font-black text-on-surface">
+                ASTRO.DEV
+            </div>
+<div class="flex gap-6">
+<a class="font-['Space_Grotesk'] text-sm tracking-widest text-on-surface-variant hover:text-tertiary hover:tracking-widest transition-all duration-500" href="#">GitHub</a>
+<a class="font-['Space_Grotesk'] text-sm tracking-widest text-on-surface-variant hover:text-tertiary hover:tracking-widest transition-all duration-500" href="#">LinkedIn</a>
+<a class="font-['Space_Grotesk'] text-sm tracking-widest text-on-surface-variant hover:text-tertiary hover:tracking-widest transition-all duration-500" href="#">Twitter</a>
+</div>
+</div>
+</footer>
+</body></html>

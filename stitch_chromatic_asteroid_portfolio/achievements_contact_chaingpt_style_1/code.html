@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#2a2a2a",
+                    "on-secondary-container": "#00616d",
+                    "surface-tint": "#ffb695",
+                    "tertiary-container": "#9b9c9c",
+                    "surface-dim": "#131313",
+                    "surface-bright": "#3a3939",
+                    "primary": "#ffb695",
+                    "on-secondary": "#00363d",
+                    "outline-variant": "#594137",
+                    "on-tertiary": "#2f3131",
+                    "on-primary-fixed": "#351000",
+                    "on-primary": "#571f00",
+                    "on-secondary-fixed-variant": "#004f58",
+                    "error": "#ffb4ab",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "on-tertiary-container": "#323434",
+                    "tertiary": "#c6c6c7",
+                    "outline": "#a88a7e",
+                    "surface-container-highest": "#353534",
+                    "on-secondary-fixed": "#001f24",
+                    "surface-variant": "#353534",
+                    "secondary-container": "#00e3fd",
+                    "on-primary-fixed-variant": "#7b2f00",
+                    "tertiary-fixed": "#e2e2e2",
+                    "surface": "#131313",
+                    "on-surface": "#e5e2e1",
+                    "primary-fixed-dim": "#ffb695",
+                    "background": "#131313",
+                    "primary-container": "#ff7120",
+                    "surface-container-lowest": "#0e0e0e",
+                    "surface-container": "#201f1f",
+                    "on-error-container": "#ffdad6",
+                    "on-primary-container": "#5c2100",
+                    "error-container": "#93000a",
+                    "secondary-fixed-dim": "#00daf3",
+                    "on-background": "#e5e2e1",
+                    "on-error": "#690005",
+                    "inverse-on-surface": "#313030",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "secondary": "#bdf4ff",
+                    "primary-fixed": "#ffdbcc",
+                    "secondary-fixed": "#9cf0ff",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "surface-container-low": "#1c1b1b",
+                    "inverse-surface": "#e5e2e1",
+                    "on-surface-variant": "#e1c0b2",
+                    "inverse-primary": "#a24000"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1440px",
+                    "section-padding": "120px",
+                    "grid-unit": "8px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "body-md": ["Space Grotesk"],
+                    "label-mono": ["Space Grotesk"],
+                    "body-lg": ["Space Grotesk"],
+                    "headline-lg": ["Space Grotesk"],
+                    "headline-md": ["Space Grotesk"],
+                    "display-xl": ["Space Grotesk"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "label-mono": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.2em", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "display-xl": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glow-sm:hover {
+            box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+        }
+        .glass-border {
+            border: 1px solid transparent;
+            background-image: linear-gradient(to bottom right, rgba(255,255,255,0.1), transparent);
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
+        }
+        .grid-pattern {
+            background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary selection:text-on-primary-fixed overflow-x-hidden">
+<!-- Background Layers -->
+<div class="fixed inset-0 z-[-1] overflow-hidden">
+<div class="absolute inset-0 grid-pattern opacity-40"></div>
+<div class="absolute top-1/4 -right-20 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-1/4 -left-20 w-[500px] h-[500px] bg-secondary-container/5 rounded-full blur-[100px]"></div>
+</div>
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full border-b border-white/10 bg-slate-950/40 backdrop-blur-xl flex justify-between items-center px-8 h-20 z-50 shadow-[0_0_15px_rgba(139,92,246,0.2)]">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-violet-500 text-2xl" data-icon="rocket_launch">rocket_launch</span>
+<span class="font-['Space_Grotesk'] tracking-widest uppercase text-xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-cyan-400">ASTRO.DEV</span>
+</div>
+<nav class="hidden md:flex gap-8">
+<a class="font-['Space_Grotesk'] tracking-widest uppercase text-sm text-slate-400 hover:text-violet-400 transition-all duration-300" href="#">Home</a>
+<a class="font-['Space_Grotesk'] tracking-widest uppercase text-sm text-cyan-400 after:content-[''] after:block after:w-1 after:h-1 after:bg-cyan-400 after:rounded-full after:mx-auto" href="#">Log</a>
+<a class="font-['Space_Grotesk'] tracking-widest uppercase text-sm text-slate-400 hover:text-violet-400 transition-all duration-300" href="#">Link</a>
+</nav>
+<button class="material-symbols-outlined text-violet-500 hover:glow-sm active:scale-95 transition-all" data-icon="menu">menu</button>
+</header>
+<main class="pt-32 pb-40 max-w-7xl mx-auto px-8">
+<!-- Mission Log Section (Achievements) -->
+<section class="mb-32">
+<div class="flex items-end justify-between mb-16">
+<div>
+<p class="font-label-mono text-label-mono text-primary mb-2">OPERATIONAL MILESTONES</p>
+<h2 class="font-headline-lg text-headline-lg uppercase">MISSION LOG</h2>
+</div>
+<div class="hidden md:block h-px bg-white/10 flex-1 mx-12 mb-4"></div>
+<span class="font-label-mono text-label-mono text-on-surface-variant opacity-50">VERIFIED ARCHIVE // 2024</span>
+</div>
+<!-- Achievement Timeline -->
+<div class="relative grid grid-cols-1 md:grid-cols-12 gap-y-12 md:gap-y-0">
+<!-- Vertical Line -->
+<div class="absolute left-[19px] md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary/0 via-primary/50 to-primary/0 md:-translate-x-1/2"></div>
+<!-- Milestone 1 -->
+<div class="relative md:col-span-5 md:text-right group">
+<div class="bg-surface-container-low/40 backdrop-blur-md p-8 rounded-none border border-white/5 hover:border-primary/50 transition-all duration-500">
+<div class="flex md:flex-row-reverse items-center gap-4 mb-4">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/20 text-primary border border-primary/30">
+<span class="material-symbols-outlined" data-icon="verified_user">verified_user</span>
+</div>
+<div>
+<p class="font-label-mono text-[10px] text-primary/70 uppercase">Certification</p>
+<h3 class="font-headline-md text-xl tracking-tight">AWS CERTIFIED</h3>
+</div>
+</div>
+<p class="text-on-surface-variant font-body-md text-sm md:text-base leading-relaxed">System architecture mastery achieved. Deployed mission-critical cloud infrastructures across distributed orbital nodes with zero downtime protocols.</p>
+</div>
+<!-- Connector Point -->
+<div class="absolute top-10 -left-[25px] md:-left-auto md:-right-[35px] w-4 h-4 bg-background border-2 border-primary rounded-full z-10">
+<div class="w-full h-full animate-ping bg-primary/40 rounded-full"></div>
+</div>
+</div>
+<div class="hidden md:block md:col-span-2"></div>
+<!-- Spacer for layout -->
+<div class="hidden md:block md:col-span-5"></div>
+<!-- Milestone 2 -->
+<div class="hidden md:block md:col-span-5 pt-12"></div>
+<div class="hidden md:block md:col-span-2"></div>
+<div class="relative md:col-span-5 group pt-0 md:pt-12">
+<div class="bg-surface-container-low/40 backdrop-blur-md p-8 rounded-none border border-white/5 hover:border-secondary-container/50 transition-all duration-500">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-12 flex items-center justify-center bg-secondary-container/20 text-secondary-container border border-secondary-container/30">
+<span class="material-symbols-outlined" data-icon="emoji_events">emoji_events</span>
+</div>
+<div>
+<p class="font-label-mono text-[10px] text-secondary-container/70 uppercase">Award Recognition</p>
+<h3 class="font-headline-md text-xl tracking-tight">DESIGN AWARD</h3>
+</div>
+</div>
+<p class="text-on-surface-variant font-body-md text-sm md:text-base leading-relaxed">Honored for 'Visual Excellence' in Interface Architecture. Recognized for pioneering high-fidelity glassmorphism systems in technical environments.</p>
+</div>
+<!-- Connector Point -->
+<div class="absolute top-10 md:top-24 -left-[25px] md:-left-[35px] w-4 h-4 bg-background border-2 border-secondary-container rounded-full z-10">
+<div class="w-full h-full animate-ping bg-secondary-container/40 rounded-full"></div>
+</div>
+</div>
+<!-- Milestone 3 -->
+<div class="relative md:col-span-5 md:text-right group pt-12">
+<div class="bg-surface-container-low/40 backdrop-blur-md p-8 rounded-none border border-white/5 hover:border-primary/50 transition-all duration-500">
+<div class="flex md:flex-row-reverse items-center gap-4 mb-4">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/20 text-primary border border-primary/30">
+<span class="material-symbols-outlined" data-icon="rocket" data-weight="fill" style="font-variation-settings: 'FILL' 1;">rocket</span>
+</div>
+<div>
+<p class="font-label-mono text-[10px] text-primary/70 uppercase">Venture Launch</p>
+<h3 class="font-headline-md text-xl tracking-tight">ORBITAL SYSTEMS X</h3>
+</div>
+</div>
+<p class="text-on-surface-variant font-body-md text-sm md:text-base leading-relaxed">Successfully engineered and launched the next-generation venture lab for Web3 primitives, securing $15M in initial ignition funding.</p>
+</div>
+<!-- Connector Point -->
+<div class="absolute top-24 -left-[25px] md:-left-auto md:-right-[35px] w-4 h-4 bg-background border-2 border-primary rounded-full z-10">
+<div class="w-full h-full animate-ping bg-primary/40 rounded-full"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Establish Link Section (Contact) -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start" id="contact">
+<div class="lg:col-span-5">
+<p class="font-label-mono text-label-mono text-secondary-container mb-2">COMMUNICATION UPLINK</p>
+<h2 class="font-headline-lg text-headline-lg uppercase mb-8">ESTABLISH LINK</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-md">Initiate direct neural handshake. Our protocols are open for high-stakes collaborations, venture inquiries, and architectural consulting.</p>
+<div class="space-y-6">
+<div class="flex items-center gap-6 p-4 border border-white/5 bg-white/2 group hover:bg-white/5 transition-all">
+<span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
+<div>
+<p class="font-label-mono text-[10px] text-on-surface-variant/50 uppercase">Station Coordinates</p>
+<p class="font-body-md text-on-surface">Neo-Tokyo Sector 7G / Remote</p>
+</div>
+</div>
+<div class="flex items-center gap-6 p-4 border border-white/5 bg-white/2 group hover:bg-white/5 transition-all">
+<span class="material-symbols-outlined text-primary" data-icon="alternate_email">alternate_email</span>
+<div>
+<p class="font-label-mono text-[10px] text-on-surface-variant/50 uppercase">Neural Handle</p>
+<p class="font-body-md text-on-surface">uplink@astro.dev</p>
+</div>
+</div>
+</div>
+<div class="mt-12 w-full aspect-video relative overflow-hidden border border-white/10">
+<img alt="Satellite view of digital topography" class="w-full h-full object-cover filter grayscale contrast-125 opacity-40" data-alt="A cinematic, high-contrast satellite view of a futuristic city grid at night, glowing with intricate networks of blue and orange lights. The image features sharp geometric lines and a deep obsidian background, reflecting a high-tech dark-mode aesthetic. The lighting is dramatic, with neon pulses highlighting key data nodes across the landscape. The atmosphere is sophisticated and technologically advanced, echoing the precision of a professional digital dossier." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWpF6x64DKKJWi7aBwmB3-rTR53jYE0jl8mAuvWN_grCz0046Djx8FV9gcDmhfDq2mRpXAx56PaHRDPt37UxvSfd7IKYvX6eJlr_bN53lnKfptjx1KdT3GJ4OTzb-wMzySHHy_Qfhxn62nNF3JmDBFU2vKt_5w_iLs6sgQm8GtFlDZ_7cy515sStbWJV4QQFJleYIbFtcnkzZ5bn9ALYQRLDWCjuWkHQZFGrM7F_-2EV3dx4PzPHgfx22dYisvsE11CjdxtMG60FA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+<div class="absolute bottom-4 left-4 flex items-center gap-2">
+<div class="w-2 h-2 bg-primary animate-pulse rounded-full"></div>
+<span class="font-label-mono text-[10px] text-primary">SCANNING AREA...</span>
+</div>
+</div>
+</div>
+<!-- Contact Form -->
+<div class="lg:col-span-7 bg-surface-container-low/20 backdrop-blur-xl p-10 lg:p-16 border border-white/10 relative">
+<!-- Corner Accents -->
+<div class="absolute top-0 left-0 w-8 h-8 border-t border-l border-primary"></div>
+<div class="absolute bottom-0 right-0 w-8 h-8 border-b border-r border-primary"></div>
+<form class="space-y-12">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="relative">
+<label class="font-label-mono text-[10px] text-primary uppercase block mb-2">Operator Designation</label>
+<input class="w-full bg-transparent border-0 border-b border-white/20 focus:border-primary focus:ring-0 px-0 py-3 text-on-surface placeholder:text-white/10 font-body-md transition-all" placeholder="Full Name or Callsign" type="text"/>
+</div>
+<div class="relative">
+<label class="font-label-mono text-[10px] text-primary uppercase block mb-2">Comm Frequency</label>
+<input class="w-full bg-transparent border-0 border-b border-white/20 focus:border-primary focus:ring-0 px-0 py-3 text-on-surface placeholder:text-white/10 font-body-md transition-all" placeholder="Email Address" type="email"/>
+</div>
+</div>
+<div class="relative">
+<label class="font-label-mono text-[10px] text-primary uppercase block mb-2">Service Protocol</label>
+<select class="w-full bg-transparent border-0 border-b border-white/20 focus:border-primary focus:ring-0 px-0 py-3 text-on-surface font-body-md transition-all appearance-none">
+<option class="bg-surface-container-highest">SYSTEM ARCHITECTURE</option>
+<option class="bg-surface-container-highest">UI/UX INTERFACE DESIGN</option>
+<option class="bg-surface-container-highest">VENTURE STRATEGY</option>
+<option class="bg-surface-container-highest">OTHER PROTOCOL</option>
+</select>
+</div>
+<div class="relative">
+<label class="font-label-mono text-[10px] text-primary uppercase block mb-2">Payload</label>
+<textarea class="w-full bg-transparent border-0 border-b border-white/20 focus:border-primary focus:ring-0 px-0 py-3 text-on-surface placeholder:text-white/10 font-body-md transition-all resize-none" placeholder="Transmission details..." rows="4"></textarea>
+</div>
+<button class="w-full md:w-auto bg-primary hover:bg-primary-container text-on-primary-fixed px-12 py-5 font-label-mono text-sm tracking-[0.3em] uppercase transition-all flex items-center justify-center gap-4 group" type="submit">
+                        Execute Link
+                        <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-20 border-t border-slate-800 bg-transparent">
+<div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="text-lg font-black text-slate-200">DEEP SPACE ARCHITECT</div>
+<div class="font-['Space_Grotesk'] text-sm tracking-widest text-violet-400">© 2024 DEEP SPACE ARCHITECT</div>
+<div class="flex gap-8">
+<a class="font-['Space_Grotesk'] text-sm tracking-widest text-slate-500 hover:text-cyan-400 hover:tracking-widest transition-all duration-500" href="#">GitHub</a>
+<a class="font-['Space_Grotesk'] text-sm tracking-widest text-slate-500 hover:text-cyan-400 hover:tracking-widest transition-all duration-500" href="#">LinkedIn</a>
+<a class="font-['Space_Grotesk'] text-sm tracking-widest text-slate-500 hover:text-cyan-400 hover:tracking-widest transition-all duration-500" href="#">Twitter</a>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar -->
+<nav class="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-md bg-slate-900/60 backdrop-blur-2xl rounded-2xl border border-cyan-500/20 flex justify-around items-center z-50 shadow-2xl shadow-violet-900/20 py-2 px-4">
+<a class="text-slate-500 p-3 hover:bg-white/5 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+</a>
+<a class="text-slate-500 p-3 hover:bg-white/5 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</a>
+<a class="text-slate-500 p-3 hover:bg-white/5 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="work">work</span>
+</a>
+<a class="bg-violet-500/20 text-cyan-400 rounded-xl p-3 shadow-[0_0_10px_rgba(34,211,238,0.4)] active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="emoji_events">emoji_events</span>
+</a>
+<a class="text-slate-500 p-3 hover:bg-white/5 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+</a>
+</nav>
+</body></html>

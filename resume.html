@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Rithish Janjeerapu</title>
+    <meta name="description" content="Resume of Rithish Janjeerapu - Full Stack Developer & AI Enthusiast.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="resume-page-body">
+
+    <!-- Navigation -->
+    <nav class="resume-nav">
+        <div class="logo">
+            <a href="index.html" class="brand-name">Rithish Janjeerapu</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Portfolio</a></li>
+            <li><a href="resume_full_stack.pdf" download="Rithish_Janjeerapu_Resume.pdf" class="btn btn-outline nav-download-btn">Download PDF</a></li>
+        </ul>
+    </nav>
+
+    <!-- Resume Viewer Section -->
+    <section class="resume-viewer-section">
+        <div class="resume-viewer-container reveal active">
+            <h2 class="resume-title">Resume</h2>
+            
+            <!-- Desktop View: Embedded PDF -->
+            <div class="pdf-wrapper">
+                <iframe src="resume_full_stack.pdf" width="100%" height="900px" style="border: none;">
+                    This browser does not support PDFs. Please download the PDF to view it: 
+                    <a href="resume_full_stack.pdf">Download PDF</a>.
+                </iframe>
+            </div>
+
+            <!-- Mobile View: Download Card Fallback -->
+            <div class="mobile-resume-card">
+                <div class="mobile-resume-icon">
+                    <svg viewBox="0 0 24 24" width="64" height="64" fill="currentColor">
+                        <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                    </svg>
+                </div>
+                <h3>Resume PDF Preview</h3>
+                <p>PDF previews are not supported on mobile browsers. Please download the PDF to view the resume directly on your device.</p>
+                <a href="resume_full_stack.pdf" download="Rithish_Janjeerapu_Resume.pdf" class="btn btn-primary">Download Resume PDF</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 <span class="brand-name">Rithish Janjeerapu</span>. Designed & Built with Vanilla HTML/CSS/JS.</p>
+    </footer>
+
+</body>
+</html>

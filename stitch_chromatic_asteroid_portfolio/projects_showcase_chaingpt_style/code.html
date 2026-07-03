@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#2a2a2a",
+                    "on-secondary-container": "#00616d",
+                    "surface-tint": "#ffb695",
+                    "tertiary-container": "#9b9c9c",
+                    "surface-dim": "#131313",
+                    "surface-bright": "#3a3939",
+                    "primary": "#ffb695",
+                    "on-secondary": "#00363d",
+                    "outline-variant": "#594137",
+                    "on-tertiary": "#2f3131",
+                    "on-primary-fixed": "#351000",
+                    "on-primary": "#571f00",
+                    "on-secondary-fixed-variant": "#004f58",
+                    "error": "#ffb4ab",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "on-tertiary-container": "#323434",
+                    "tertiary": "#c6c6c7",
+                    "outline": "#a88a7e",
+                    "surface-container-highest": "#353534",
+                    "on-secondary-fixed": "#001f24",
+                    "surface-variant": "#353534",
+                    "secondary-container": "#00e3fd",
+                    "on-primary-fixed-variant": "#7b2f00",
+                    "tertiary-fixed": "#e2e2e2",
+                    "surface": "#131313",
+                    "on-surface": "#e5e2e1",
+                    "primary-fixed-dim": "#ffb695",
+                    "background": "#131313",
+                    "primary-container": "#ff7120",
+                    "surface-container-lowest": "#0e0e0e",
+                    "surface-container": "#201f1f",
+                    "on-error-container": "#ffdad6",
+                    "on-primary-container": "#5c2100",
+                    "error-container": "#93000a",
+                    "secondary-fixed-dim": "#00daf3",
+                    "on-background": "#e5e2e1",
+                    "on-error": "#690005",
+                    "inverse-on-surface": "#313030",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "secondary": "#bdf4ff",
+                    "primary-fixed": "#ffdbcc",
+                    "secondary-fixed": "#9cf0ff",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "surface-container-low": "#1c1b1b",
+                    "inverse-surface": "#e5e2e1",
+                    "on-surface-variant": "#e1c0b2",
+                    "inverse-primary": "#a24000"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1440px",
+                    "section-padding": "120px",
+                    "grid-unit": "8px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "body-md": ["Space Grotesk"],
+                    "label-mono": ["Space Grotesk"],
+                    "body-lg": ["Space Grotesk"],
+                    "headline-lg": ["Space Grotesk"],
+                    "headline-md": ["Space Grotesk"],
+                    "display-xl": ["Space Grotesk"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "label-mono": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.2em", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "display-xl": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(42, 42, 42, 0.4);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            border-color: #ffb695;
+            box-shadow: 0 0 30px rgba(255, 182, 149, 0.1);
+            transform: translateY(-4px);
+        }
+        .grid-pattern {
+            background-image: linear-gradient(rgba(255, 182, 149, 0.05) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(255, 182, 149, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary selection:text-on-primary">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full border-b border-white/10 bg-slate-950/40 backdrop-blur-xl z-50 flex justify-between items-center px-8 h-20 shadow-[0_0_15px_rgba(139,92,246,0.2)]">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-violet-500" data-icon="rocket_launch">rocket_launch</span>
+<h1 class="text-xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-cyan-400 font-['Space_Grotesk'] uppercase tracking-widest">ASTRO.DEV</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8 font-['Space_Grotesk'] tracking-widest uppercase text-sm">
+<a class="text-slate-400 hover:text-violet-400 transition-all duration-300" href="#">Home</a>
+<a class="text-cyan-400 after:content-[''] after:block after:w-1 after:h-1 after:bg-cyan-400 after:rounded-full after:mx-auto" href="#">Missions</a>
+<a class="text-slate-400 hover:text-violet-400 transition-all duration-300" href="#">Crew</a>
+<a class="text-slate-400 hover:text-violet-400 transition-all duration-300" href="#">Signal</a>
+</nav>
+<button class="text-slate-400 hover:text-violet-400 active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</header>
+<main class="relative pt-32 pb-40 px-6 md:px-12 max-w-[1440px] mx-auto min-h-screen grid-pattern">
+<!-- Section Header -->
+<div class="mb-20">
+<div class="flex items-center gap-4 mb-4">
+<span class="h-[1px] w-12 bg-primary"></span>
+<span class="font-label-mono text-label-mono text-primary uppercase">Active Deployments</span>
+</div>
+<h2 class="font-display-xl text-display-xl mb-6">Missions.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                A selection of tactical operations and digital architectural builds engineered for the decentralized frontier.
+            </p>
+</div>
+<!-- Bento-inspired Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Project Card 1 (Large) -->
+<div class="md:col-span-8 glass-card group relative overflow-hidden flex flex-col md:flex-row h-full">
+<div class="w-full md:w-1/2 overflow-hidden h-64 md:h-auto">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="A cinematic 3D abstract visualization of a glowing orange nebula cloud suspended in deep space. Tiny crystalline structures float within the gas, catching light from a distant star. The atmosphere is technical yet ethereal, using a palette of deep blacks, obsidian grays, and vibrant tangerine accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9N7jdTzdjzcUX3vQHZ_UAUlydJAzB_PvXz2_9CIFVoSZR4fFpeqG-tHKk2HcH-7Ue0zuSxBt8SjEXrGleKSW10bwnqlbEQuKDNbWIHvjR2I0obyXJau68LuW4iES8DvgPTvThDHwBwKsIJmrZHqPpTLxvUiY30oLPmcvpDnSde9-WPQZ8RGobnYKvv0_Eza55VkLum-3oMLXrqSuceu9DlnDL7U0zvQFOGnYnCZ3UBK3FdqbD2X-LDcm8i8H9TVR_7khX4TdvHP4"/>
+</div>
+<div class="p-8 md:w-1/2 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline-md text-headline-md text-on-surface">NEBULA PROTOCOL</h3>
+<span class="material-symbols-outlined text-primary" data-icon="terminal">terminal</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                            Next-generation decentralized identity layer providing autonomous authentication for Web3 ventures and DAOs.
+                        </p>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-3 py-1 bg-surface-container-highest border border-white/10 text-[10px] font-label-mono uppercase tracking-widest text-on-surface">Rust</span>
+<span class="px-3 py-1 bg-surface-container-highest border border-white/10 text-[10px] font-label-mono uppercase tracking-widest text-on-surface">Solana</span>
+<span class="px-3 py-1 bg-surface-container-highest border border-white/10 text-[10px] font-label-mono uppercase tracking-widest text-on-surface">React</span>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<a class="group/link flex items-center gap-2 font-label-mono text-label-mono text-primary hover:text-white transition-colors" href="#">
+                            DEPLOYED SITE <span class="material-symbols-outlined text-[16px]" data-icon="north_east">north_east</span>
+</a>
+<a class="group/link flex items-center gap-2 font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-colors" href="#">
+                            REPOSITORY <span class="material-symbols-outlined text-[16px]" data-icon="code">code</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Project Card 2 -->
+<div class="md:col-span-4 glass-card group flex flex-col">
+<div class="h-48 overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="A highly detailed 3D geometric composition of interconnected chrome spheres and orange glowing lines representing a tactical data grid. The lighting is low-key, focused on the sharp reflections of the spheres. The overall aesthetic is professional, architectural, and futuristic dark mode." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcaaNgpc0B7vaGLu9Gkkx35oJA8Ha0GG0rLFstPsa-p45HYSEYHFODO-UrpzzbvAR_9wji1DhrDyP49yf5sctAHrQWaMwwgvK9eYukVaRfrn5Oh4Hu7j3wztYLX1_ttmRmenYjeVC_fUwO7X-cSsz3rFFxU6zFcF-pBu5qNaZ8RaHpUetSOOfpdoU79pW2Jyuv3R7HVnN3tlhPKjBDiK5khDxHnFH2BWDLIhIDypqiNRpfFd3V6fBT8MpbbUVh_heFCFP3G572pHE"/>
+</div>
+<div class="p-8 flex flex-col grow">
+<div class="mb-4">
+<span class="font-label-mono text-[10px] text-primary tracking-widest uppercase mb-1 block">Alpha Build</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">QUANTUM DASH</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 grow">
+                        High-fidelity monitoring dashboard for cross-chain liquidity pools and institutional assets.
+                    </p>
+<div class="flex items-center gap-4 pt-4 border-t border-white/5">
+<a class="text-primary hover:glow-sm transition-all" href="#"><span class="material-symbols-outlined" data-icon="link">link</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-all" href="#"><span class="material-symbols-outlined" data-icon="deployed_code">deployed_code</span></a>
+</div>
+</div>
+</div>
+<!-- Project Card 3 -->
+<div class="md:col-span-4 glass-card group flex flex-col">
+<div class="h-48 overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="A minimalist tech setup featuring a dark keyboard with glowing orange backlighting and a holographic interface floating above it. The scene is shot from a macro perspective with a shallow depth of field. The lighting highlights a sleek, obsidian aesthetic with sharp orange accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBlCFE159dTHQdgXu-NhGA5lK5_TXGHmx8Tg0Cs-u9_Fd2K1eJ0bQFjkp8lY-WMCP9IBo0OW-0U65ke8WoiX2sz5b5XFGE7L5yBNUSfooPhkbY--EFePdjDrA5XpU6U99MMCATB5qvbXzkfd71u_ptwdqd6J6dKnCLQcUf0tIK8k53lmSv1WO91KGVO6h1J5WkDuuddmEPLF3zFwP7QNAXV_GfIPC2Lz7RIICRC1U6WkrUbmnALIZsqFgfKDt1oT1yTFGQ6OCPsJk"/>
+</div>
+<div class="p-8 flex flex-col grow">
+<div class="mb-4">
+<span class="font-label-mono text-[10px] text-primary tracking-widest uppercase mb-1 block">Legacy Tool</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">VOID COMPILER</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 grow">
+                        Open-source CLI tool for optimizing smart contract bytecode on Ethereum mainnet.
+                    </p>
+<div class="flex items-center gap-4 pt-4 border-t border-white/5">
+<a class="text-primary hover:glow-sm transition-all" href="#"><span class="material-symbols-outlined" data-icon="download">download</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-all" href="#"><span class="material-symbols-outlined" data-icon="folder_zip">folder_zip</span></a>
+</div>
+</div>
+</div>
+<!-- Project Card 4 (Long Title) -->
+<div class="md:col-span-8 glass-card group flex flex-col md:flex-row-reverse h-full">
+<div class="w-full md:w-1/2 overflow-hidden h-64 md:h-auto">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="A wide angle view of a server room with racks of hardware illuminated by blue and orange status lights. The composition is symmetrical and emphasizes technical precision and massive computational power. The mood is dark and secure, consistent with a high-end data facility aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxuH_a0pU9s2s1yA4PHSr9_khER-nW_OITmFIlPNfGj5IDka4S6anbwAxuVEMJeIF0NYWqTBDmq2y_eea5motm6YTbZJV2mn99kxZ7tk_6G5DlXmcg1lAD93rtedYpICgJ1Y8_wOc17GRdQRebeRA2mmh7MGhbzOrgOh6z1wUIm8JSjftr4JOjyVUZQyBdaQAr9MSMmuxBScq-ZglkettX7uWg8qqgUHbxNaBCQbyqNvcnZZYfpfG5ui5Nd2csrFAJEoIR0RpQT9Q"/>
+</div>
+<div class="p-8 md:w-1/2 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase">Aether Vault v2</h3>
+<span class="material-symbols-outlined text-primary" data-icon="lock">lock</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                            Secure cryptographic storage solution with multi-sig approval and timed release functionality for institutional digital holdings.
+                        </p>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-3 py-1 bg-surface-container-highest border border-white/10 text-[10px] font-label-mono uppercase tracking-widest text-on-surface">Solidity</span>
+<span class="px-3 py-1 bg-surface-container-highest border border-white/10 text-[10px] font-label-mono uppercase tracking-widest text-on-surface">Go</span>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<a class="px-6 py-2 bg-primary text-on-primary font-label-mono text-[12px] uppercase tracking-[0.2em] hover:shadow-[0_0_20px_rgba(255,182,149,0.4)] transition-all" href="#">
+                            ACCESS VAULT
+                        </a>
+<a class="font-label-mono text-label-mono text-on-surface-variant hover:text-white transition-colors" href="#">
+                            DOCS
+                        </a>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-md bg-slate-900/60 backdrop-blur-2xl rounded-2xl border border-cyan-500/20 flex justify-around items-center h-16 z-50 shadow-2xl shadow-violet-900/20">
+<a class="text-slate-500 p-3 hover:bg-white/5 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+</a>
+<a class="text-slate-500 p-3 hover:bg-white/5 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</a>
+<a class="bg-violet-500/20 text-cyan-400 rounded-xl p-3 shadow-[0_0_10px_rgba(34,211,238,0.4)] active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="work">work</span>
+</a>
+<a class="text-slate-500 p-3 hover:bg-white/5 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="emoji_events">emoji_events</span>
+</a>
+<a class="text-slate-500 p-3 hover:bg-white/5 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="w-full py-20 border-t border-slate-800 bg-transparent">
+<div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-8 font-['Space_Grotesk'] text-sm tracking-widest">
+<div class="text-lg font-black text-slate-200">DEEP SPACE ARCHITECT</div>
+<div class="flex gap-8">
+<a class="text-slate-500 hover:text-cyan-400 hover:tracking-widest transition-all duration-500" href="#">GitHub</a>
+<a class="text-slate-500 hover:text-cyan-400 hover:tracking-widest transition-all duration-500" href="#">LinkedIn</a>
+<a class="text-slate-500 hover:text-cyan-400 hover:tracking-widest transition-all duration-500" href="#">Twitter</a>
+</div>
+<div class="text-violet-400 uppercase">© 2024 DEEP SPACE ARCHITECT</div>
+</div>
+</footer>
+</body></html>

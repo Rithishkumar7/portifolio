@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ASTRO.DEV | Deep Space Architect</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #131313;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glow-orange {
+            box-shadow: 0 0 20px rgba(255, 113, 32, 0.3);
+        }
+        .grid-overlay {
+            background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), 
+                              linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-high": "#2a2a2a",
+                      "on-secondary-container": "#00616d",
+                      "surface-tint": "#ffb695",
+                      "tertiary-container": "#9b9c9c",
+                      "surface-dim": "#131313",
+                      "surface-bright": "#3a3939",
+                      "primary": "#ffb695",
+                      "on-secondary": "#00363d",
+                      "outline-variant": "#594137",
+                      "on-tertiary": "#2f3131",
+                      "on-primary-fixed": "#351000",
+                      "on-primary": "#571f00",
+                      "on-secondary-fixed-variant": "#004f58",
+                      "error": "#ffb4ab",
+                      "tertiary-fixed-dim": "#c6c6c7",
+                      "on-tertiary-container": "#323434",
+                      "tertiary": "#c6c6c7",
+                      "outline": "#a88a7e",
+                      "surface-container-highest": "#353534",
+                      "on-secondary-fixed": "#001f24",
+                      "surface-variant": "#353534",
+                      "secondary-container": "#00e3fd",
+                      "on-primary-fixed-variant": "#7b2f00",
+                      "tertiary-fixed": "#e2e2e2",
+                      "surface": "#131313",
+                      "on-surface": "#e5e2e1",
+                      "primary-fixed-dim": "#ffb695",
+                      "background": "#131313",
+                      "primary-container": "#ff7120",
+                      "surface-container-lowest": "#0e0e0e",
+                      "surface-container": "#201f1f",
+                      "on-error-container": "#ffdad6",
+                      "on-primary-container": "#5c2100",
+                      "error-container": "#93000a",
+                      "secondary-fixed-dim": "#00daf3",
+                      "on-background": "#e5e2e1",
+                      "on-error": "#690005",
+                      "inverse-on-surface": "#313030",
+                      "on-tertiary-fixed-variant": "#454747",
+                      "secondary": "#bdf4ff",
+                      "primary-fixed": "#ffdbcc",
+                      "secondary-fixed": "#9cf0ff",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "surface-container-low": "#1c1b1b",
+                      "inverse-surface": "#e5e2e1",
+                      "on-surface-variant": "#e1c0b2",
+                      "inverse-primary": "#a24000"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "container-max": "1440px",
+                      "section-padding": "120px",
+                      "grid-unit": "8px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "body-md": ["Space Grotesk"],
+                      "label-mono": ["Space Grotesk"],
+                      "body-lg": ["Space Grotesk"],
+                      "headline-lg": ["Space Grotesk"],
+                      "headline-md": ["Space Grotesk"],
+                      "display-xl": ["Space Grotesk"]
+              },
+              "fontSize": {
+                      "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                      "label-mono": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.2em", "fontWeight": "500"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                      "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                      "headline-md": ["32px", {"lineHeight": "1.3", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                      "display-xl": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md bg-background text-on-background">
+<!-- TopAppBar Navigation Shell -->
+<header class="fixed top-0 w-full border-b border-violet-500/30 bg-slate-950/40 backdrop-blur-xl flex justify-between items-center px-8 h-20 w-full z-50 shadow-[0_0_15px_rgba(139,92,246,0.2)]">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-violet-500" data-icon="rocket_launch">rocket_launch</span>
+<span class="font-['Space_Grotesk'] tracking-widest uppercase text-xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-cyan-400">ASTRO.DEV</span>
+</div>
+<nav class="hidden md:flex items-center gap-8 font-label-mono text-slate-400">
+<a class="text-cyan-400 after:content-[''] after:block after:w-1 after:h-1 after:bg-cyan-400 after:rounded-full after:mx-auto hover:text-violet-400 transition-all duration-300" href="#">HOME</a>
+<a class="hover:text-violet-400 transition-all duration-300" href="#">EXPLORE</a>
+<a class="hover:text-violet-400 transition-all duration-300" href="#">PROJECTS</a>
+<a class="hover:text-violet-400 transition-all duration-300" href="#">LABS</a>
+</nav>
+<button class="material-symbols-outlined text-violet-500 hover:glow-sm active:scale-95" data-icon="menu">menu</button>
+</header>
+<!-- Main Content Canvas -->
+<main class="relative pt-20">
+<!-- Drifting Atmospheric Layer (Asteroids/Geometric) -->
+<div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+<div class="absolute top-[20%] left-[10%] w-32 h-32 opacity-20 border border-white/20 rotate-45"></div>
+<div class="absolute top-[60%] right-[15%] w-48 h-48 opacity-10 border border-violet-500/30 -rotate-12"></div>
+<div class="absolute bottom-[10%] left-[30%] w-16 h-16 opacity-30 border border-cyan-400/20 rotate-[110deg]"></div>
+<div class="grid-overlay absolute inset-0 opacity-20"></div>
+</div>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex flex-col items-center justify-center px-gutter max-w-container-max mx-auto z-10">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary-container/10 blur-[120px] rounded-full pointer-events-none"></div>
+<div class="text-center space-y-6">
+<p class="font-label-mono text-primary uppercase tracking-[0.4em] mb-4">Establishing Uplink...</p>
+<h1 class="font-display-xl text-display-xl text-on-surface leading-tight">
+<span class="block">ASTRO.DEV</span>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary-container">DEEP SPACE ARCHITECT</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto opacity-80">
+                    Constructing high-performance digital ecosystems across the multichain expanse. Specializing in immutable interfaces and orbital user experiences.
+                </p>
+<div class="pt-10 flex flex-col md:flex-row gap-6 justify-center">
+<button class="px-10 py-5 bg-primary-container text-on-primary-container font-label-mono text-sm tracking-widest uppercase hover:glow-orange transition-all duration-300 flex items-center gap-3">
+                        INITIALIZE PROJECT
+                        <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<button class="px-10 py-5 border border-white/20 bg-white/5 font-label-mono text-sm tracking-widest uppercase hover:bg-white/10 transition-all duration-300">
+                        VIEW DOSSIER
+                    </button>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50">
+<span class="font-label-mono text-[10px] tracking-[0.3em]">DESCEND</span>
+<div class="w-px h-12 bg-gradient-to-b from-primary to-transparent"></div>
+</div>
+</section>
+<!-- About Me Section -->
+<section class="relative py-section-padding px-gutter max-w-container-max mx-auto z-10" id="about">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+<!-- Profile Visual (Bento-style Left Column) -->
+<div class="md:col-span-5 space-y-gutter">
+<div class="glass-card aspect-[4/5] relative overflow-hidden group">
+<img alt="Portrait of the architect" class="w-full h-full object-cover grayscale opacity-70 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="A moody, high-contrast professional portrait of a tech visionary with sharp features. The subject is lit by a dramatic orange rim light against a deep obsidian background filled with soft bokeh geometric particles. The aesthetic is clean, cinematic, and professional, echoing a futuristic venture lab atmosphere with a cold tech-inspired color palette punctuated by warm amber accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEO0egLzh9MC3TplGsXfM0tJJhg34dMt93DT0YvSukfpDPOPDwYcO_VgJbC77kcfTqgk-ViGH1Zi-zsErg6-RhwtGzRrltYChlSL7Q1OKPSAgW6b_wNLVkIAcmWSgLrmPckqRbA5mVRzRczehtrWLyAzwEKTPH0MVQ3WPgFOmFRZM5WP4mQ1VPaRWrRReY2gs4eEN4JLkxtu4ZD2juEaBOSfuf7eZ6pOCEZcRT915oM-qofa54OEw0M4oZkUS__0bnGSSdp3aZrI8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
+<div>
+<p class="font-label-mono text-[10px] text-primary">ID_DESIGNATION</p>
+<h3 class="font-headline-md text-white">CHIEF_OPERATOR</h3>
+</div>
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="verified_user" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+</div>
+<div class="glass-card p-8 space-y-4">
+<h4 class="font-label-mono text-xs text-slate-500 uppercase">System Status</h4>
+<div class="flex items-center gap-4">
+<div class="w-3 h-3 rounded-full bg-secondary-container animate-pulse shadow-[0_0_10px_#00e3fd]"></div>
+<span class="font-label-mono text-sm">ACTIVE ON-CHAIN</span>
+</div>
+</div>
+</div>
+<!-- Bio & Technical Arsenal (Right Column) -->
+<div class="md:col-span-7 space-y-12">
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="h-px w-12 bg-primary"></div>
+<h2 class="font-label-mono text-primary uppercase tracking-[0.5em]">BIOGRAPHY</h2>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Architecting the future of decentralized interfaces.</h3>
+<div class="space-y-6 text-on-surface-variant font-body-lg text-body-lg max-w-xl">
+<p>
+                                Based in the digital frontier, I specialize in bridging the gap between complex backend architectures and intuitive, high-fidelity user experiences. My work focuses on performance-critical applications that demand both technical rigor and aesthetic precision.
+                            </p>
+<p>
+                                With over a decade of experience in the lab, I've evolved from a full-stack engineer into a product architect, leading teams to deploy systems that handle billions in throughput while maintaining pixel-perfect visual standards.
+                            </p>
+</div>
+</div>
+<!-- Technical Arsenal -->
+<div class="space-y-8">
+<div class="flex items-center gap-4">
+<div class="h-px w-12 bg-secondary-container"></div>
+<h2 class="font-label-mono text-secondary-container uppercase tracking-[0.5em]">TECHNICAL ARSENAL</h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<!-- Skill Category -->
+<div class="glass-card p-6 border-l-4 border-l-primary space-y-4">
+<span class="font-label-mono text-[10px] text-slate-500">CORE_ENGINEERING</span>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 border border-white/10 bg-white/5 font-label-mono text-xs hover:border-primary transition-colors cursor-default">REACT.js</span>
+<span class="px-3 py-1 border border-white/10 bg-white/5 font-label-mono text-xs hover:border-primary transition-colors cursor-default">TYPESCRIPT</span>
+<span class="px-3 py-1 border border-white/10 bg-white/5 font-label-mono text-xs hover:border-primary transition-colors cursor-default">NEXT.js</span>
+<span class="px-3 py-1 border border-white/10 bg-white/5 font-label-mono text-xs hover:border-primary transition-colors cursor-default">RUST</span>
+</div>
+</div>
+<!-- Skill Category -->
+<div class="glass-card p-6 border-l-4 border-l-secondary-container space-y-4">
+<span class="font-label-mono text-[10px] text-slate-500">VISUAL_SYNTHESIS</span>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 border border-white/10 bg-white/5 font-label-mono text-xs hover:border-secondary-container transition-colors cursor-default">THREE.js</span>
+<span class="px-3 py-1 border border-white/10 bg-white/5 font-label-mono text-xs hover:border-secondary-container transition-colors cursor-default">WEBGL</span>
+<span class="px-3 py-1 border border-white/10 bg-white/5 font-label-mono text-xs hover:border-secondary-container transition-colors cursor-default">SHADERS</span>
+<span class="px-3 py-1 border border-white/10 bg-white/5 font-label-mono text-xs hover:border-secondary-container transition-colors cursor-default">GLSL</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="w-full py-20 border-t border-white/5">
+<div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col gap-2">
+<span class="text-lg font-black text-slate-200 font-['Space_Grotesk']">ASTRO.DEV</span>
+<p class="font-['Space_Grotesk'] text-sm tracking-widest text-slate-500">© 2024 DEEP SPACE ARCHITECT</p>
+</div>
+<div class="flex gap-12">
+<a class="font-['Space_Grotesk'] text-sm tracking-widest text-slate-500 hover:text-cyan-400 hover:tracking-widest transition-all duration-500" href="#">GITHUB</a>
+<a class="font-['Space_Grotesk'] text-sm tracking-widest text-slate-500 hover:text-cyan-400 hover:tracking-widest transition-all duration-500" href="#">LINKEDIN</a>
+<a class="font-['Space_Grotesk'] text-sm tracking-widest text-slate-500 hover:text-cyan-400 hover:tracking-widest transition-all duration-500" href="#">TWITTER</a>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar Mobile Shell -->
+<nav class="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 flex justify-around items-center z-50 bg-slate-900/60 backdrop-blur-2xl fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-md rounded-2xl border border-cyan-500/20 shadow-2xl shadow-violet-900/20 px-4 py-2">
+<button class="bg-violet-500/20 text-cyan-400 rounded-xl p-3 shadow-[0_0_10px_rgba(34,211,238,0.4)] active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+</button>
+<button class="text-slate-500 p-3 hover:bg-white/5 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+<button class="text-slate-500 p-3 hover:bg-white/5 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="work">work</span>
+</button>
+<button class="text-slate-500 p-3 hover:bg-white/5 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="emoji_events">emoji_events</span>
+</button>
+<button class="text-slate-500 p-3 hover:bg-white/5 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+</button>
+</nav>
+</body></html>

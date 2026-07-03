@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#2a2a2a",
+                        "on-secondary-container": "#00616d",
+                        "surface-tint": "#ffb695",
+                        "tertiary-container": "#9b9c9c",
+                        "surface-dim": "#131313",
+                        "surface-bright": "#3a3939",
+                        "primary": "#ffb695",
+                        "on-secondary": "#00363d",
+                        "outline-variant": "#594137",
+                        "on-tertiary": "#2f3131",
+                        "on-primary-fixed": "#351000",
+                        "on-primary": "#571f00",
+                        "on-secondary-fixed-variant": "#004f58",
+                        "error": "#ffb4ab",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "on-tertiary-container": "#323434",
+                        "tertiary": "#c6c6c7",
+                        "outline": "#a88a7e",
+                        "surface-container-highest": "#353534",
+                        "on-secondary-fixed": "#001f24",
+                        "surface-variant": "#353534",
+                        "secondary-container": "#00e3fd",
+                        "on-primary-fixed-variant": "#7b2f00",
+                        "tertiary-fixed": "#e2e2e2",
+                        "surface": "#131313",
+                        "on-surface": "#e5e2e1",
+                        "primary-fixed-dim": "#ffb695",
+                        "background": "#131313",
+                        "primary-container": "#ff7120",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-container": "#201f1f",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-container": "#5c2100",
+                        "error-container": "#93000a",
+                        "secondary-fixed-dim": "#00daf3",
+                        "on-background": "#e5e2e1",
+                        "on-error": "#690005",
+                        "inverse-on-surface": "#313030",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "secondary": "#bdf4ff",
+                        "primary-fixed": "#ffdbcc",
+                        "secondary-fixed": "#9cf0ff",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "surface-container-low": "#1c1b1b",
+                        "inverse-surface": "#e5e2e1",
+                        "on-surface-variant": "#e1c0b2",
+                        "inverse-primary": "#a24000"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1440px",
+                        "section-padding": "120px",
+                        "grid-unit": "8px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Space Grotesk"],
+                        "label-mono": ["Space Grotesk"],
+                        "body-lg": ["Space Grotesk"],
+                        "headline-lg": ["Space Grotesk"],
+                        "headline-md": ["Space Grotesk"],
+                        "display-xl": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                        "label-mono": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.2em", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "display-xl": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #0e0e0e;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-module {
+            background: rgba(20, 20, 20, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .ghost-border-gradient {
+            border-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.2), transparent) 1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-on-background min-h-screen selection:bg-primary-container selection:text-white">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-8 h-16 md:px-24 bg-black/80 backdrop-blur-lg border-b border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.1)]">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#FF7120]" data-icon="token">token</span>
+<span class="text-[#FF7120] font-bold tracking-tighter text-lg">ASTEROID_LABS</span>
+</div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.2em] text-xs text-white/60 hover:text-[#FF7120] transition-colors duration-300" href="#">EXPLORE</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.2em] text-xs text-white/60 hover:text-[#FF7120] transition-colors duration-300" href="#">SYSTEM</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.2em] text-xs text-[#FF7120] border-b-2 border-[#FF7120]" href="#">CONTACT</a>
+</nav>
+</header>
+<main class="pt-32 pb-40 px-6 md:px-24 max-w-[1440px] mx-auto">
+<!-- SECTION: MISSION LOG -->
+<section class="mb-32">
+<div class="flex items-center gap-4 mb-12">
+<div class="h-px w-12 bg-primary-container"></div>
+<h2 class="font-headline-lg text-headline-lg uppercase tracking-widest text-white">MISSION LOG</h2>
+<span class="text-xs font-label-mono text-primary-container opacity-50 tracking-[0.4em]">ACHIEVEMENTS_V1.0</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Achievement 1 -->
+<div class="md:col-span-4 glass-module p-8 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-16 h-16 border-t border-r border-primary-container/30"></div>
+<div class="text-primary-container font-label-mono text-xs mb-4">LOG_ENTRY_2023_01</div>
+<div class="flex justify-between items-start mb-6">
+<h3 class="font-headline-md text-headline-md text-white">AWS CERTIFIED</h3>
+<span class="material-symbols-outlined text-primary-container text-4xl" data-icon="cloud_done">cloud_done</span>
+</div>
+<p class="text-white/60 mb-8 font-body-md">Cloud architecture validated. Successfully implemented high-availability distributed systems for Web3 infrastructure protocols.</p>
+<div class="flex justify-between items-center pt-6 border-t border-white/5">
+<span class="text-[10px] tracking-widest uppercase text-white/30">Status: Verified</span>
+<span class="text-[10px] tracking-widest uppercase text-white/30">Level: Expert</span>
+</div>
+</div>
+<!-- Achievement 2 -->
+<div class="md:col-span-4 glass-module p-8 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-16 h-16 border-t border-r border-primary-container/30"></div>
+<div class="text-primary-container font-label-mono text-xs mb-4">LOG_ENTRY_2023_08</div>
+<div class="flex justify-between items-start mb-6">
+<h3 class="font-headline-md text-headline-md text-white">DESIGN AWARD</h3>
+<span class="material-symbols-outlined text-primary-container text-4xl" data-icon="military_tech">military_tech</span>
+</div>
+<p class="text-white/60 mb-8 font-body-md">Visual excellence recognized for the 'Obsidian UI' framework. Merging functional data with cinematic art direction.</p>
+<div class="flex justify-between items-center pt-6 border-t border-white/5">
+<span class="text-[10px] tracking-widest uppercase text-white/30">Status: Awarded</span>
+<span class="text-[10px] tracking-widest uppercase text-white/30">Rank: Platinum</span>
+</div>
+</div>
+<!-- Achievement 3 -->
+<div class="md:col-span-4 glass-module p-8 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-16 h-16 border-t border-r border-primary-container/30"></div>
+<div class="text-primary-container font-label-mono text-xs mb-4">LOG_ENTRY_2022_11</div>
+<div class="flex justify-between items-start mb-6">
+<h3 class="font-headline-md text-headline-md text-white">SENIOR ARCHITECT</h3>
+<span class="material-symbols-outlined text-primary-container text-4xl" data-icon="architecture">architecture</span>
+</div>
+<p class="text-white/60 mb-8 font-body-md">Promotion to Senior Tier. Overseeing mission-critical systems and mentoring the next generation of lab operators.</p>
+<div class="flex justify-between items-center pt-6 border-t border-white/5">
+<span class="text-[10px] tracking-widest uppercase text-white/30">Status: Active</span>
+<span class="text-[10px] tracking-widest uppercase text-white/30">Sector: Core_OS</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION: ESTABLISH LINK -->
+<section class="max-w-4xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg uppercase tracking-widest text-white mb-4">ESTABLISH LINK</h2>
+<p class="font-label-mono text-white/40 uppercase tracking-widest text-sm">Secure Communication Protocol // Zero-Knowledge Transmission</p>
+</div>
+<div class="glass-module p-12 relative overflow-hidden">
+<!-- Background visual element -->
+<div class="absolute -bottom-24 -right-24 w-64 h-64 bg-primary-container/5 blur-3xl rounded-full"></div>
+<form class="space-y-12 relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- Field 1 -->
+<div class="space-y-2 group">
+<label class="font-label-mono text-white/40 text-xs uppercase tracking-widest block transition-colors group-focus-within:text-primary-container">Operator Designation</label>
+<input class="w-full bg-transparent border-0 border-b border-white/20 py-4 px-0 text-white placeholder:text-white/10 focus:ring-0 focus:border-primary-container transition-all outline-none font-body-md" placeholder="NAME_REQUIRED" type="text"/>
+</div>
+<!-- Field 2 -->
+<div class="space-y-2 group">
+<label class="font-label-mono text-white/40 text-xs uppercase tracking-widest block transition-colors group-focus-within:text-primary-container">Comm Frequency</label>
+<input class="w-full bg-transparent border-0 border-b border-white/20 py-4 px-0 text-white placeholder:text-white/10 focus:ring-0 focus:border-primary-container transition-all outline-none font-body-md" placeholder="EMAIL_ENCRYPTED" type="email"/>
+</div>
+</div>
+<!-- Field 3 -->
+<div class="space-y-2 group">
+<label class="font-label-mono text-white/40 text-xs uppercase tracking-widest block transition-colors group-focus-within:text-primary-container">Payload</label>
+<textarea class="w-full bg-transparent border-0 border-b border-white/20 py-4 px-0 text-white placeholder:text-white/10 focus:ring-0 focus:border-primary-container transition-all outline-none font-body-md resize-none" placeholder="MESSAGE_DATA_BUFFER..." rows="4"></textarea>
+</div>
+<div class="flex flex-col md:flex-row items-center justify-between gap-8 pt-8">
+<div class="flex items-center gap-4 text-[10px] font-label-mono text-white/30 tracking-widest uppercase">
+<span class="material-symbols-outlined text-xs" data-icon="verified_user">verified_user</span>
+                            END-TO-END ENCRYPTION ENABLED
+                        </div>
+<button class="w-full md:w-auto px-12 py-5 bg-primary-container text-black font-bold font-label-mono uppercase tracking-[0.2em] hover:bg-white hover:shadow-[0_0_30px_rgba(255,113,32,0.4)] transition-all duration-300" type="submit">
+                            Initiate Launch
+                        </button>
+</div>
+</form>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 flex items-center justify-center space-x-2 bg-black/40 backdrop-blur-2xl border border-white/20 min-w-[320px] shadow-[0_0_20px_rgba(255,113,32,0.2)]">
+<a class="text-white/40 p-4 hover:bg-white/10 hover:text-white transition-all" href="#"><span class="material-symbols-outlined" data-icon="terminal">terminal</span></a>
+<a class="text-white/40 p-4 hover:bg-white/10 hover:text-white transition-all" href="#"><span class="material-symbols-outlined" data-icon="rocket_launch">rocket_launch</span></a>
+<a class="text-white/40 p-4 hover:bg-white/10 hover:text-white transition-all" href="#"><span class="material-symbols-outlined" data-icon="account_tree">account_tree</span></a>
+<a class="text-white/40 p-4 hover:bg-white/10 hover:text-white transition-all" href="#"><span class="material-symbols-outlined" data-icon="history_edu">history_edu</span></a>
+<a class="text-[#FF7120] bg-white/5 border-t-2 border-[#FF7120] p-4" href="#"><span class="material-symbols-outlined" data-icon="contact_emergency">contact_emergency</span></a>
+</nav>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center max-w-[1440px] mx-auto opacity-50 border-t border-white/5 font-['Space_Grotesk'] text-[10px] tracking-[0.3em] uppercase">
+<div class="text-white font-black mb-4 md:mb-0">ASTEROID LABS</div>
+<div class="text-white/30">©2024 ASTEROID LABS // CORE_OS_V.1</div>
+<div class="flex space-x-6 mt-4 md:mt-0">
+<a class="text-white/30 hover:text-[#FF7120] transition-all" href="#">SYSTEM_STATUS</a>
+<a class="text-white/30 hover:text-[#FF7120] transition-all" href="#">ENCRYPTION_PROTOCOL</a>
+<a class="text-white/30 hover:text-[#FF7120] transition-all" href="#">TERMINAL_ACCESS</a>
+</div>
+</footer>
+</body></html>
